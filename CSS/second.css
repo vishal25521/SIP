@@ -1,0 +1,33 @@
+ul{
+    list-style-type: circle;
+    font-size: 150%;
+}
+ol{
+    list-style-type:armenian ;
+    font-size: 2em;
+}
+#me{
+    list-style-type: square;
+}
+#me2{
+    list-style-type: georgian;
+    font-size: larger;
+}
+#me3{
+    list-style-type: lower-latin;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.me{
+    list-style-type: upper-roman;
+}
+h2{
+    color: aqua;
+    font: size 5px;;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+h1{
+    color: red;
+    font-weight:bolder
+
+}
