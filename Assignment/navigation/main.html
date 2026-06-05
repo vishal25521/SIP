@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Navigation Bar</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        .textmain{
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            align-items:center;
+            
+            background:linear-gradient(135deg, #667eea, #764ba2);
+            box-shadow:0 4px 15px black;
+        }
+
+        .text{
+            text-decoration:none;
+            color:white;
+            font-size:15px;
+            font-weight:60;
+            padding:12px 24px;
+            border-radius:30px;
+            transition:all 0.3s ease;
+        }
+
+        .text:hover{
+            background:rgb(180, 70, 70);
+            height: 30px;
+            color:#764ba2;
+            transform:translateY(-3px);
+            box-shadow:0 5px 15px rgba(255,255,255,0.4);
+        }
+
+        .text:active{
+            transform:scale(0.95);
+        }
+        h1{
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="textmain">
+        <a class="text" href="#">Home</a>
+        <a class="text" href="http://127.0.0.1:5500/Assignment/navigation/About.html">About</a>
+        <a class="text" href="http://127.0.0.1:5500/Assignment/navigation/contact.html">Contact</a>
+    </nav>
+    <h1>html</h1>
+
+</body>
+</html>
