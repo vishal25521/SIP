@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=di, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        .can{
+            height: 100vh;
+            width: 100%;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 10px solid red;
+            border-radius: 100px;
+            /* border-bottom-color:transparent ;   */
+            animation: movebox 1.5s ease-in-out infinite;
+
+        }
+        .bo{
+             height: 100px;
+            width: 100px;
+            border: 10px solid yellow;
+            border-radius: 100px;
+             border-top-color:transparent ;  
+            animation: movebox 1.5s ease-in-out infinite;
+
+        }
+        @keyframes movebox{
+           0% {
+            transform: translateY(0);
+           }
+           50%{
+            transform: translateY(500px);
+           }
+           100%{
+            transform: translateY(0);
+           }
+           
+        }
+       
+        *{
+            background-color: black;
+        }
+    </Style>
+</head>
+<body>
+    <div class="can">
+        <div class="box box1"></div>
+        <div class="bo box1"></div>
+
+    </div>
+</body>
+</html>
