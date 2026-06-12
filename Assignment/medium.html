@@ -3,10 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Medium Clone</title>
+    <style>
+      *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f8f8f8;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:white;
+    border-bottom:1px solid #ddd;
+}
+
+header input{
+    width:300px;
+    padding:8px;
+}
+
+header button{
+    padding:8px 15px;
+    background:black;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:220px 1fr 300px;
+    gap:20px;
+    padding:20px;
+}
+
+.sidebar{
+    background:white;
+    padding:20px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:12px 0;
+    cursor:pointer;
+}
+
+.content{
+    background:white;
+    padding:20px;
+}
+
+.article{
+    border-bottom:1px solid #ddd;
+    padding:20px 0;
+}
+
+.article h2{
+    margin-bottom:10px;
+}
+
+.article p{
+    color:#555;
+    margin-bottom:10px;
+}
+
+.rightbar{
+    background:white;
+    padding:20px;
+}
+
+.pick{
+    margin-bottom:20px;
+}
+
+.pick h4{
+    margin-bottom:5px;
+}
+    </style>
 </head>
 <body>
-    
-    <span></span>
+
+    <header>
+        <h1>Medium</h1>
+        <input type="text" placeholder="Search">
+        <button>Write</button>
+    </header>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <ul>
+                <li>🏠 Home</li>
+                <li>📚 Library</li>
+                <li>👤 Profile</li>
+                <li>📖 Stories</li>
+                <li>📊 Stats</li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <div class="article">
+                <h2>Stop Memorizing Design Patterns</h2>
+                <img src="med1.png" alt=""width="100px">
+                <p>
+                    Choose design patterns based on pain points and
+                    build better software architecture.
+                </p>
+                <span>❤️ 8.3K | 💬 84</span>
+            </div>
+
+            <div class="article">
+                <h2>Should You Still Learn to Code?</h2>
+                <p>
+                    AI is changing software development. Learn what
+                    skills matter most.
+                </p>
+                <span>❤️ 5.1K | 💬 42</span>
+            </div>
+            <div class="article">
+                <h2>Should You Still Learn to Code?</h2>
+                <p>
+                    AI is changing software development. Learn what
+                    skills matter most.
+                </p>
+                <span>❤️ 5.1K | 💬 42</span>
+            </div>
+            <div class="article">
+                <h2>Should You Still Learn to Code?</h2>
+                <p>
+                    AI is changing software development. Learn what
+                    skills matter most.
+                </p>
+                <span>❤️ 5.1K | 💬 42</span>
+            </div>
+            <div class="article">
+                <h2>Should You Still Learn to Code?</h2>
+                <p>
+                    AI is changing software development. Learn what
+                    skills matter most.
+                </p>
+                <span>❤️ 5.1K | 💬 42</span>
+            </div>
+            <div class="article">
+                <h2>Should You Still Learn to Code?</h2>
+                <p>
+                    AI is changing software development. Learn what
+                    skills matter most.
+                </p>
+                <span>❤️ 5.1K | 💬 42</span>
+            </div>
+        </main>
+
+        <aside class="rightbar">
+            <h3>Staff Picks</h3>
+
+            <div class="pick">
+                <h4>Gatori Fishing in America</h4>
+                <p>6d ago</p>
+            </div>
+
+            <div class="pick">
+                <h4>Cigarettes are bad. I miss them.</h4>
+                <p>May 29</p>
+            </div>
+
+            <div class="pick">
+                <h4>I Sat in Engineering Meetings</h4>
+                <p>Jun 2</p>
+            </div>
+        </aside>
+
+    </div>
+
 </body>
 </html>
