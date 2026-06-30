@@ -11,7 +11,7 @@
     <input class="inp" type="text" placeholder="Enter your name">
     <button class="btn">ADD</button>
 
-    <ul class="tasklist">Y
+    <ul class="tasklist">
     </ul>
 
     <SCript>
@@ -35,7 +35,26 @@
         })
 
         tasklist.addEventListener('click',(ev)=>{
-            console.log(ev.target);
+            // console.log(ev.target);
+            let list = ev.target;
+            if (list.classList.contains('up')){
+                let parentElement = list.parentElement.parentElement;
+                console.log(parentElement);
+                let previousElement = parentElement.previousElementSibling;
+                console.log(previousElement);
+                tasklist.insertBefore(parentElement,previousElement);
+            }
+            else if (list.classList.contains('down')){
+                let parentElement = list.parentElement.parentElement;
+                console.log(parentElement);
+                let nextElement = parentElement.nextElementSibling;
+                console.log(previousElement);
+                tasklist.insertBefore(parentElement,nextElement);
+            } else if (list.classList.contains('del')){
+                let parentElement = list.parentElement.parentElement;
+                console.log(parentElement);
+                parentElement.remove();
+            }
         })
     </SCript>
 </body>
