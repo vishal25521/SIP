@@ -6,6 +6,135 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <section class="why">
+
+<h2>Why Choose Us?</h2>
+
+<div class="why-container">
+
+<div class="why-card">
+<h3>Verified Professionals</h3>
+<p>Background checked service providers.</p>
+</div>
+
+<div class="why-card">
+<h3>Secure Payments</h3>
+<p>Pay safely with digital payments.</p>
+</div>
+
+<div class="why-card">
+<h3>Real Time Tracking</h3>
+<p>Track your service booking live.</p>
+</div>
+
+</div>
+
+</section>
 </body>
 </html>
+
+// ================= SEARCH SERVICE =================
+
+function searchService() {
+    let service = document.querySelector(".search-box input").value;
+
+    if (service === "") {
+        alert("Please enter a service name.");
+    } else {
+        alert("Searching for: " + service);
+    }
+}
+
+// Search button click
+document.querySelector(".search-box button")
+.addEventListener("click", searchService);
+
+
+// ================= BOOKING FORM =================
+
+const bookingForm = document.getElementById("bookingForm");
+
+bookingForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    alert("✅ Booking Confirmed Successfully!");
+
+    bookingForm.reset();
+});
+
+
+// ================= DARK MODE =================
+
+// Add this button in HTML if you want:
+// <button id="darkBtn">🌙 Dark Mode</button>
+
+const darkBtn = document.getElementById("darkBtn");
+
+if (darkBtn) {
+    darkBtn.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+    });
+}
+
+
+// ================= STATS COUNTER =================
+
+const counters = document.querySelectorAll(".stat-box h2");
+
+counters.forEach(counter => {
+
+    let text = counter.innerText;
+
+    if (text.includes("+")) {
+        let target = parseInt(text);
+        let count = 0;
+
+        let update = setInterval(() => {
+            count += Math.ceil(target / 50);
+
+            if (count >= target) {
+                counter.innerText = target + "+";
+                clearInterval(update);
+            } else {
+                counter.innerText = count + "+";
+            }
+        }, 30);
+    }
+});
+
+
+// ================= BACK TO TOP BUTTON =================
+
+const topBtn = document.createElement("button");
+
+topBtn.innerHTML = "↑";
+topBtn.id = "topBtn";
+
+document.body.appendChild(topBtn);
+
+topBtn.style.position = "fixed";
+topBtn.style.bottom = "20px";
+topBtn.style.right = "20px";
+topBtn.style.padding = "12px 16px";
+topBtn.style.border = "none";
+topBtn.style.borderRadius = "50%";
+topBtn.style.background = "#2563eb";
+topBtn.style.color = "white";
+topBtn.style.cursor = "pointer";
+topBtn.style.display = "none";
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+});
+
+topBtn.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
