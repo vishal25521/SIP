@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+
+</head>
+
+<body>
+        <h2>Create Account</h2>
+
+        <form>
+
+                <input type="email" placeholder="Email Address" required> <br> <br>
+                <input type="password" placeholder="Password" required> <br> <br>
+                <button class="btn" type="submit">
+                    Login
+                </button>
+        </form>
+
+        <script>
+            const email = document.querySelector("#Email");
+        const password = document.querySelector("#password");
+        const btn = document.querySelector(".btn");
+
+        btn.addEventListener("click",(e)=>{
+            e.preventDefault();
+
+            if(localStorage.getItem("savedEmail") === email.value && localStorage.getItem("savedPassword") === password.value ) {
+                window.location.href = "projectWorld.html";
+                alert("Sign in successful!");
+            } else {
+                alert("Invalid email or password.");
+            }
+        })
+        </script>
+</body>
+
+
+</html>

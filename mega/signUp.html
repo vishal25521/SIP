@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUP</title>
+    <style>
+      
+    </style>
+
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="signup-box">
+
+        <h2>Create Account</h2>
+
+        <form id="signupForm">
+
+            <div class="input-box">
+                <i class="fa-solid fa-user"></i>
+                <input type="text"
+                       placeholder="Full Name"
+                       required>
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-envelope"></i>
+               <input type="email" name="email" id="Email2" placeholder="Email Address" required>
+
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-phone"></i>
+                <input type="tel"
+                       placeholder="Mobile Number"
+                       required>
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text"
+                       placeholder="City"
+                       required>
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-user-tag"></i>
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password"
+                       placeholder="Password"
+                       required>
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password"
+                       placeholder="Confirm Password"
+                       id="password2"
+                       required>
+            </div>
+
+            <button class="btn2" type="submit">
+                Create Account
+            </button>
+
+            <p class="login-link">
+                Already have an account?
+                <a href="SignIn.html">Login</a>
+            </p>
+
+        </form>
+
+    </div>
+
+</div>
+  <script>
+     const email2 = document.querySelector("#Email2");
+const password2 = document.querySelector("#password2");
+const btn2 = document.querySelector(".btn2");
+
+btn2.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.setItem("savedEmail", email2.value);
+    localStorage.setItem("savedPassword", password2.value);
+    alert("Sign up successful!...");
+    window.location.href = "projectWorld.html";
+});
+  </script>
+
+
+</body>
+</html>
+
